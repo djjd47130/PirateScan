@@ -15,17 +15,17 @@ type
     txtState: TEdit;
     txtZip: TEdit;
     Panel1: TPanel;
-    BitBtn2: TBitBtn;
-    BitBtn1: TBitBtn;
+    btnPay: TBitBtn;
+    btnCancel: TBitBtn;
     lblTotal: TLabel;
     txtCardNumber: TEdit;
     txtExpirationDate: TEdit;
     txtSecurityCode: TEdit;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure BitBtn1Click(Sender: TObject);
+    procedure btnCancelClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure BitBtn2Click(Sender: TObject);
+    procedure btnPayClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,12 +41,12 @@ implementation
 
 uses uMain;
 
-procedure TfrmCreditCard.BitBtn1Click(Sender: TObject);
+procedure TfrmCreditCard.btnCancelClick(Sender: TObject);
 begin
   Close;
 end;
 
-procedure TfrmCreditCard.BitBtn2Click(Sender: TObject);
+procedure TfrmCreditCard.btnPayClick(Sender: TObject);
 const
   EXPIRY_DIV = '\';
 var
@@ -142,7 +142,7 @@ procedure TfrmCreditCard.FormShow(Sender: TObject);
 begin
   Show;
   Application.ProcessMessages;
-  BitBtn2.SetFocus;
+  btnPay.SetFocus;
 end;
 
 end.

@@ -52,7 +52,7 @@ object frmMain: TfrmMain
     DesignSize = (
       459
       46)
-    object BitBtn1: TBitBtn
+    object btnPrison: TBitBtn
       Left = 319
       Top = 8
       Width = 125
@@ -67,9 +67,9 @@ object frmMain: TfrmMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
-      OnClick = BitBtn1Click
+      OnClick = btnPrisonClick
     end
-    object BitBtn2: TBitBtn
+    object btnPay: TBitBtn
       Left = 152
       Top = 8
       Width = 154
@@ -83,7 +83,7 @@ object frmMain: TfrmMain
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
-      OnClick = BitBtn2Click
+      OnClick = btnPayClick
     end
   end
 end

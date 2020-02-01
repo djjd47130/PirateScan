@@ -84,7 +84,7 @@ object frmCreditCard: TfrmCreditCard
     DesignSize = (
       239
       46)
-    object BitBtn2: TBitBtn
+    object btnPay: TBitBtn
       Left = 130
       Top = 8
       Width = 98
@@ -93,9 +93,9 @@ object frmCreditCard: TfrmCreditCard
       Caption = 'Pay Fine Now'
       Default = True
       TabOrder = 0
-      OnClick = BitBtn2Click
+      OnClick = btnPayClick
     end
-    object BitBtn1: TBitBtn
+    object btnCancel: TBitBtn
       Left = 26
       Top = 8
       Width = 98
@@ -103,7 +103,7 @@ object frmCreditCard: TfrmCreditCard
       Anchors = [akTop, akRight]
       Caption = 'Cancel'
       TabOrder = 1
-      OnClick = BitBtn1Click
+      OnClick = btnCancelClick
     end
   end
   object txtCardNumber: TEdit

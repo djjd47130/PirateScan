@@ -9,15 +9,16 @@ uses
 
 const
   FINE_AMOUNT = 75000.00;
+  PRISON_TIME = 10;
 
 type
   TfrmMain = class(TForm)
     Panel1: TPanel;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
+    btnPrison: TBitBtn;
+    btnPay: TBitBtn;
     Label1: TLabel;
-    procedure BitBtn1Click(Sender: TObject);
-    procedure BitBtn2Click(Sender: TObject);
+    procedure btnPrisonClick(Sender: TObject);
+    procedure btnPayClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
@@ -34,9 +35,9 @@ implementation
 
 uses uCreditCard;
 
-procedure TfrmMain.BitBtn1Click(Sender: TObject);
+procedure TfrmMain.btnPrisonClick(Sender: TObject);
 begin
-  case MessageDlg('Are you sure you would like to go to prison?',
+  case MessageDlg('Are you sure you would like to go to prison for '+IntToStr(PRISON_TIME)+' years?',
     mtWarning, [mbYes, mbNo], 0)
   of
     mrYes: begin
@@ -46,14 +47,15 @@ begin
   end;
 end;
 
-procedure TfrmMain.BitBtn2Click(Sender: TObject);
+procedure TfrmMain.btnPayClick(Sender: TObject);
 begin
   frmCreditCard.ShowModal;
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
-  BitBtn2.Caption:= 'Pay Fine ('+FormatFloat('$#,##0.00', FINE_AMOUNT) + ')';
+  btnPay.Caption:= 'Pay Fine ('+FormatFloat('$#,##0.00', FINE_AMOUNT) + ')';
+  btnPrison.Caption:= 'Prison ('+IntToStr(PRISON_TIME)+' Years)';
 end;
 
 end.
