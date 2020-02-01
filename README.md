@@ -25,7 +25,7 @@ If you decide to go with prison time, you are taken back to the prior window, wh
 
 ![alt text](/Img/ssPrison.png)
 
-Once, you agree, you finally see this last prompt before the application closes:
+Once you agree, you finally see this last prompt before the application closes:
 
 ![alt text](/Img/ssSoap.png)
 
