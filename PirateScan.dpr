@@ -3,7 +3,8 @@ program PirateScan;
 uses
   Vcl.Forms,
   uMain in 'uMain.pas' {frmMain},
-  uCreditCard in 'uCreditCard.pas' {frmCreditCard};
+  uCreditCard in 'uCreditCard.pas' {frmCreditCard},
+  JD.CmdLine in 'JD.CmdLine.pas';
 
 {$R *.res}
 

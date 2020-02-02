@@ -108,7 +108,7 @@ begin
   if C then Z:= StrToIntDef(txtSecurityCode.Text, 0);
   if C then C:= Z > 99;
   if C then begin
-    if MessageDlg('You are about to pay a '+FormatFloat('$#,##0.00', FINE_AMOUNT)+' fine. Continue?',
+    if MessageDlg('You are about to pay a '+FormatFloat('$#,##0.00', _FineAmount)+' fine. Continue?',
       mtInformation, [mbYes, mbNo], 0) = mrYes then
     begin
       Sleep(4000);
@@ -135,7 +135,7 @@ end;
 
 procedure TfrmCreditCard.FormCreate(Sender: TObject);
 begin
-  lblTotal.Caption:= FormatFloat('$#,##0.00', FINE_AMOUNT);
+  lblTotal.Caption:= FormatFloat('$#,##0.00', _FineAmount);
 end;
 
 procedure TfrmCreditCard.FormShow(Sender: TObject);

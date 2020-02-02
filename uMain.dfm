@@ -20,7 +20,7 @@ object frmMain: TfrmMain
     155)
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
+  object lblMain: TLabel
     Left = 16
     Top = 24
     Width = 428
