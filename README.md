@@ -29,4 +29,13 @@ Once you agree, you finally see this last prompt before the application closes:
 
 ![alt text](/Img/ssSoap.png)
 
+## Parameters
+
+You can override the default amounts by providing parameters in the execution of the app.
+
+Example: `PirateScan.exe -fine 250 -prison 20`
+
+ - fine - The dollar amount of the fine.
+ - prison - The number of years of prison time.
+
 Enjoy!
